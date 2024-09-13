@@ -3,7 +3,7 @@ onsubmit = function(e){
     ok = true;
     if(ok && Correo_electronico.value==""){
         ok=false;
-        alert("Debe escribir su Email");
+        alert("Escribir correctamente su email");
         Correo_electronico.focus();
     }
    
