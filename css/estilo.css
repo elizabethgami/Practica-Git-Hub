@@ -1,13 +1,17 @@
 :root{ /* paleta de colores o cualquier valor que se utilice más de una vez*/
     --blanco: #ffffff;
-    --oscuro: #0e0c0c;
+    --oscuro: #0c0c0c;
     /*--primario: #ffc107;*/
-    --secunadrio: #cdd035;
+    --secunadrio: #ccce4c;
     --gris: #8b8b8b;
     --grisClaro: #DFE9F3;
-    --Azulfuerte: #8ba6da;
-    --verde: #75d189;
-    --azulmarino: #3a5490;
+
+    --Azulfuerte: #7999d6;
+    --verde: #6ed484;
+    --azulmarino: #3d5691;
+
+    
+
 }
 
 /*Globales*/
