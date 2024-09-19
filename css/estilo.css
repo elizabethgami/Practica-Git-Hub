@@ -1,0 +1,482 @@
+:root{ /* paleta de colores o cualquier valor que se utilice más de una vez*/
+    --blanco: #ffffff;
+    --oscuro: #0c0c0c;
+    /*--primario: #ffc107;*/
+    --secunadrio: #c5c751;
+    --gris: #8b8b8b;
+    --grisClaro: #DFE9F3;
+
+    --Azulfuerte: #6d92d8;
+    --verde: #6ed484;
+    --azulmarino: #445c94;
+}
+
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box; /*Hack para box model*/
+    scroll-snap-type: mandatory;
+    height:100%;
+    
+}
+.bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #82A0D8 50%, #edf04c 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+  .bg3 {
+    animation-duration:5s;
+  }
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+/*scroll snap*/
+.servicio, 
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop:always ;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px; /* 1 rem=10px*/
+    /*font-family: 'Krub', sans-serif;*/
+    /*background-image: linear-gradient(to top, var(--Azulfuerte) 0%, var(--gris) 100% );*/
+   
+}
+/*scroll snap*/
+.servicio, 
+.navegacion-principal,
+.formulario{
+    scroll-snap-align: center;
+    scroll-snap-stop:always ;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+body{
+    font-size: 16px; /* 1 rem=10px*/
+    /*font-family: 'Krub', sans-serif;*/
+    /*background-image: linear-gradient(to top, var(--verde) 0%, var(--verde)  100% );*/
+    font-family: "big caslon", Helvetica, sans-serif
+    
+}
+/*Tipografia*/
+
+h1{
+    font-size: 7.8rem;
+    color: var(--blanco);
+    letter-spacing: 50px; /* Ajusta el valor según tus necesidades */
+    font-family: "apple chancery", Helvetica, sans-serif; 
+}
+.titulo3{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px; /* Ancho de la foto */
+    margin: 1%;
+    justify-content: center;
+}
+
+h2{
+    font-size: 3.8rem;
+    /*font-family: 'Metropolis1920', sans-serif;*/
+    font-family: "STOKED", Helvetica, sans-serif; 
+    margin: 3%;
+}
+h3{
+    font-size: 2.8rem;
+    font-family: "STOKED", Helvetica, sans-serif; 
+}
+h1,h2,h3{
+    text-align: center;
+}
+/*Logo mix company*/
+/* Estilos para la imagen */
+.imagen_mix{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px; /* Ancho de la foto */
+    margin: 1%;
+    
+}
+.contenedor0{
+    max-width: 220rem;
+    height: 15rem;
+    margin: 0%;
+    padding: 0%;
+    background-color: var(--oscuro);
+    
+}
+/*Navegacion principal*/
+.nav-bg{
+    background-color: var(--Azulfuerte);
+}
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+   color: var(--blanco);
+   text-decoration: none;
+   font-size: 2.8rem;
+   font-weight: 700;
+   padding: 1rem;
+   font-family: "STOKED", Helvetica, sans-serif; 
+}
+.navegacion-principal a:hover{
+    background-color: var(--secunadrio);
+    color: var(--blanco);
+}
+
+/*Hero*/
+.hero{
+    background-image: url(../img/Banner.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 480px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-hero{
+    position: absolute;
+    /*background-color: rgba(0, 0, 0, 7); /*anterior*/
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco)
+}
+/*Boton de jugar*/
+.boton {
+    background-color: var(--Azulfuerte);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 9rem;
+    font-size: 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4rem;
+    font-family: "STOKED", Helvetica, sans-serif;
+    text-align: center;
+    border: none;
+    transition: margin-top 0.3s ease, background-color 0.3s ease; /* Agrega una transición para el margen superior y el color de fondo */
+}
+
+.boton:hover {
+    margin-top: 8rem; /* Cambia el margen superior al pasar el cursor sobre el botón */
+    background-color: var(--secunadrio); /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+}  
+/* Estilos para el video */
+video {
+    cursor: pointer;
+    width: 900px; /* Ancho del video */
+    display: block;
+    margin: 0 auto;
+    z-index: 9999; /* Asegura que el video esté sobre otros elementos */
+    border-radius: .5rem;
+    border: 6px solid var(--Azulfuerte) /* Ancho y color del borde */
+}
+@media (max-width: 768px) {
+    video {
+        width: 50%;
+    }
+}
+/*Origen*/
+/* Estilos para el contenedor con fondo gris */
+.contenedor1 {
+    text-align: center; /* Centra el contenido horizontalmente */
+    padding: 0px; /* Añade espacio alrededor del contenido */
+    max-width: 700px; /* Ancho máximo del contenedor (ajusta según tus preferencias) */
+    margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+    margin-block: 0%;
+}
+
+/* Estilos para el texto dentro del contenedor */
+.texto {
+    display: inline-block; /* Permite que el texto se centre horizontalmente */
+    background-color: white; /* Fondo blanco para el texto */
+    padding: 50px; /* Espacio alrededor del texto */
+    font-size: 16px; /* Tamaño de fuente más pequeño (ajusta según tus preferencias) */
+    text-align: justify;
+    border-radius: 3rem;
+    line-height: 1.5;
+    
+}
+.banner{
+    margin-left: 10%;
+    margin-block: 50px;
+    border-radius: 3rem;
+    text-align: center;
+    padding: 0px;
+    
+
+}
+/*previsualizaciones*/
+.contenedor-principal {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-block: 3%;
+  }
+
+  .contenedor-principal__imagen-izquierda img{
+    margin-left: -20%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 20px;
+    border-radius: 3rem;
+  }
+
+/*Persoanjes*/
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto;
+   
+}
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco );
+    padding: 2rem;
+    border-radius: 1rem ;
+}
+@media (min-width: 768px) {
+    .personajes{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /*Fraccion para dividir en partes iguales*/
+        column-gap: 1rem;
+    }
+}
+.personaje1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.personaje1 h3{
+    color: var(--Azulfuerte);
+    font-weight:normal;
+    margin: 2px;
+}
+.personaje1 p{
+    line-height: 2;
+    text-align: center;
+    text-align: justify;
+    padding: 0px; 
+    
+}
+strong {
+    font-weight: bold;
+}
+.personaje1 .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
+.icono1{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Borde redondo para la imagen */
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor sin distorsionarla */
+}
+.icono2{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Borde redondo para la imagen */
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor sin distorsionarla */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    
+}
+.icono3{
+    width: 70%;
+    height: 80%;
+    border-radius: 50%; /* Borde redondo para la imagen */
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor sin distorsionarla */
+}
+/*equipo*/
+.contenedor6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 600px; /* Ajusta según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor */
+  }
+
+  /* Estilo para la imagen */
+  .imagen {
+    max-width: 50%; /* Ajusta según tus necesidades */
+    border-radius: 8px; /* Borde redondeado, opcional */
+  }
+
+  /* Estilo para la descripción */
+  .descripcion {
+    max-width: 50%; /* Ajusta según tus necesidades */
+    font-size: 18px;
+  }
+
+/*formulario*/
+.formulario{
+    background-color: var(--gris);
+    width: min(60rem, 100%);/* utiliza el valor más pequeño*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    height: 300px;
+}
+.formulario fieldset{
+    border:none;
+  
+}
+@media (min-width: 768px) {
+    .contenedor-campos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 4rem;
+        column-gap: 1rem;
+        text-align: center;
+    }
+
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1/3;
+    }
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display:block;
+}
+.campo textarea{
+    height: 20rem;
+}
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+} 
+.boton2{
+    background-color: var(--secunadrio);
+    color: var(--blanco);
+    padding: 1rem 1rem;
+    margin-top: 5rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    
+}
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+    
+}
+.boton2:hover{
+    cursor: pointer;
+}
+/*Footer*/
+.footer{
+    text-align: center;
+}
+
+/*Animación al cargar la pagina*/
+/* Definición de la animación */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* Aplicación de la animación a los elementos */
+.hero, .bienvenida, .boton, .Video, .contenedor1, .boton2, .footer, .personajes, .formulario, .nav-bg, .imagen_mix, .titulo, .contenedor, .contenedor6, .imagen {
+    animation: fade-in 2s ease-in-out;
+  }
+
+  @font-face { 
+    font-family: stoked; 
+    src: url(http://sitename.com/wp-content/themes/themename/fonts/stoked.ttf); 
+    font-weight: normal; 
+    }
+
+    .iframe-container {
+        max-width: 100%;
+        overflow: hidden;
+
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+    }         

@@ -12,7 +12,47 @@
         <link rel="stylesheet" href="css/estilo.css">
         
         <!--Parte de iker js-->
-
+        <script type="text/javascript">
+            function bloquearMinusculas(evt) {
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                var inputValue = String.fromCharCode(charCode);
+                var regex;
+    
+                if (evt.target.id === 'Email') {
+                    regex = /^[Aa-Zz0-9@._-]$/;
+                    
+                    var emailInput = document.getElementById("Email");
+                    var emailValue = emailInput.value + inputValue;
+    
+                    if (inputValue === '@' && emailValue.split('@').length > 2) {
+                        evt.preventDefault();
+                    }
+                } else {
+                    regex = /^[A-Z]$/;
+                }
+    
+                if (!regex.test(inputValue)) {
+                    evt.preventDefault();
+                }
+            }
+    
+            // Desactivar la funcionalidad de copiar y pegar en el formulario
+            document.addEventListener('DOMContentLoaded', function() {
+                var inputElements = document.getElementsByTagName('input');
+                for (var i = 0; i < inputElements.length; i++) {
+                    inputElements[i].addEventListener('copy', function(e) {
+                        e.preventDefault();
+                    });
+                    inputElements[i].addEventListener('paste', function(e) {
+                        e.preventDefault();
+                    });
+                }
+            });
+            
+           
+        </script>
+    </head>
+    <body>
         
         <div class="contenedor0">
             <header>
