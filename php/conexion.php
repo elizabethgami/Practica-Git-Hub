@@ -15,4 +15,6 @@ function Conectar(){
 function Cerrar($conn){
 	mysqli_close($conn);
 }
+
+//HOLA COMO ESTAS ES LA NUEVA ACTUALIZACION DE GIT LUIS
 ?>
