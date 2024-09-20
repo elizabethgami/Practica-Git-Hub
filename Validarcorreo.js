@@ -3,7 +3,7 @@ onsubmit = function(e){
     ok = true;
     if(ok && Correo_electronico.value==""){
         ok=false;
-        alert("Escribe tu correo:");
+        alert("Escribe el gmail");
         Correo_electronico.focus();
     }
    
