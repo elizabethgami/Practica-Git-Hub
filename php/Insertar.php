@@ -17,5 +17,5 @@
          echo '<script>alert("Error al guardar el registro: ' . $conn->error . '");</script>';
      }
      Cerrar($conn);
-    
+    //hola
 ?>
